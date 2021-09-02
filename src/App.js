@@ -1,10 +1,29 @@
 import './App.scss';
 import BookSelfHome from './components/book-self-home';
+import BookReader from './components/book-reader';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <BookSelfHome />
+      <Router>
+        <Switch>
+          <Route path="/reader">
+            <BookReader />
+          </Route>
+          <Route path="/home">
+            <BookSelfHome />
+          </Route>
+          <Route path="/">
+            <BookSelfHome />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
