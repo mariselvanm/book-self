@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
             <BookSelfHome />
           </Route>
           <Route path="/">
-            <BookSelfHome />
+            <BookReader />
           </Route>
         </Switch>
       </Router>
